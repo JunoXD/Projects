@@ -1,0 +1,145 @@
+-->>Start reading input file...
+Input file processed
+Total length of sections need to be scheduled: 1564.5 hrs
+Section lengths are rounded to the length of the smallest standard slot it fits in.
+Total length of time available all classrooms combined: 2565.0 hrs
+Demand/resources: 61.0%
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+-->>Start paring up half-semester sections...
+Using license file /Users/ziqingwen/gurobi.lic
+Academic license - for non-commercial use only
+Gurobi Optimizer version 9.0.1 build v9.0.1rc0 (mac64)
+Optimize a model with 479 rows, 575 columns and 1581 nonzeros
+Model fingerprint: 0xd88cfed5
+Variable types: 0 continuous, 575 integer (575 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 120.0000000
+Presolve removed 458 rows and 468 columns
+Presolve time: 0.00s
+Presolved: 21 rows, 107 columns, 214 nonzeros
+Found heuristic solution: objective 145.0000000
+Variable types: 0 continuous, 107 integer (107 binary)
+
+Root relaxation: objective 1.460000e+02, 14 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     146.0000000  146.00000  0.00%     -    0s
+
+Explored 0 nodes (14 simplex iterations) in 0.00 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 146 145 120 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.460000000000e+02, best bound 1.460000000000e+02, gap 0.0000%
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+Half-semester sections paired: 36 (out of 48)
+Time elapsed: 0:00:11.353861
+
+-->>Start preparing input for scheduling...
+Input data ready: 0:00:32.972610
+
+-->>Start setting up scheduling optimization...
+Model initiated: 0:00:00.000062
+Variables set up: 0:00:07.101433
+Objective set up: 0:14:31.106845
+Constraint #1 set up: 0:00:39.979470
+Constraint #2 set up: 0:01:15.085401
+Constraint #3 set up: 0:00:18.829895
+Constraint #4 set up: 0:00:07.080285
+Constraint #5 set up: 0:00:05.782885
+Constraint #6 set up: 0:00:45.422573
+Constraint #7 set up: 0:06:33.913313
+
+-->>Start scheduling...
+Gurobi Optimizer version 9.0.1 build v9.0.1rc0 (mac64)
+Optimize a model with 3857287 rows, 2526291 columns and 249168669 nonzeros
+Model fingerprint: 0x70d75f5e
+Variable types: 0 continuous, 2526291 integer (2526291 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 554.7083333
+Presolve removed 0 rows and 0 columns (presolve time = 66s) ...
+Presolve removed 3633473 rows and 2431920 columns (presolve time = 129s) ...
+Presolve removed 3633473 rows and 2431924 columns (presolve time = 131s) ...
+Presolve removed 3801086 rows and 2431924 columns (presolve time = 137s) ...
+Presolve removed 3818042 rows and 2431926 columns (presolve time = 140s) ...
+Presolve removed 3831491 rows and 2431926 columns (presolve time = 145s) ...
+Presolve removed 3831491 rows and 2431926 columns (presolve time = 150s) ...
+Presolve removed 3834902 rows and 2432174 columns (presolve time = 155s) ...
+Presolve removed 3836990 rows and 2432174 columns (presolve time = 160s) ...
+Presolve removed 3836990 rows and 2432174 columns (presolve time = 165s) ...
+Presolve removed 3836990 rows and 2432174 columns (presolve time = 170s) ...
+Presolve removed 3837541 rows and 2432725 columns (presolve time = 176s) ...
+Presolve removed 3836928 rows and 2432112 columns
+Presolve time: 175.73s
+Presolved: 20359 rows, 94179 columns, 1752723 nonzeros
+Variable types: 0 continuous, 94179 integer (94117 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       1   -0.0000000e+00   0.000000e+00   1.238377e+05    190s
+   22332    7.8371060e+02   0.000000e+00   2.916565e+04    195s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 7.997049e+02, 17144 iterations, 8.26 seconds
+Total elapsed time = 200.04s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  799.70486    0  135  554.70833  799.70486  44.2%     -  200s
+H    0     0                     793.7708333  799.70486  0.75%     -  200s
+H    0     0                     795.1875000  799.70486  0.57%     -  202s
+     0     0  796.91667    0  139  795.18750  796.91667  0.22%     -  203s
+H    0     0                     795.4166667  796.91667  0.19%     -  208s
+H    0     0                     796.4166667  796.91667  0.06%     -  210s
+     0     0     cutoff    0       796.41667  796.41667  0.00%     -  211s
+
+Cutting planes:
+  Gomory: 23
+  Cover: 4
+  Clique: 56
+  MIR: 6
+  GUB cover: 4
+  Zero half: 59
+
+Explored 1 nodes (36432 simplex iterations) in 217.32 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 796.417 795.417 795.188 ... 554.708
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.964166666667e+02, best bound 7.964166666667e+02, gap 0.0000%
+Model optimized: 0:03:53.702206
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+Total preference score: 796.4166666666666
+Total sections assigned: 467 (90.7% out of 515)
+Total length of sections assigned: 1410.25 hrs (90.1% out of 1564.5)
+Total time elapsed: 0:29:16.484239
+Successfully optimized. Results in "schedules_large.xlsx"

@@ -1,0 +1,102 @@
+-->>Start reading input file...
+Input file processed
+Total length of sections need to be scheduled: 89.0 hrs
+Section lengths are rounded to the length of the smallest standard slot it fits in.
+Total length of time available all classrooms combined: 120.0 hrs
+Demand/resources: 74.2%
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+-->>Start paring up half-semester sections...
+Using license file /Users/ziqingwen/gurobi.lic
+Academic license - for non-commercial use only
+Gurobi Optimizer version 9.0.1 build v9.0.1rc0 (mac64)
+Optimize a model with 15 rows, 12 columns and 32 nonzeros
+Model fingerprint: 0x98f1cd73
+Variable types: 0 continuous, 12 integer (12 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 3e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 5.0000000
+Presolve removed 15 rows and 12 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+Half-semester sections paired: 4 (out of 7)
+Time elapsed: 0:00:00.305202
+
+-->>Start preparing input for scheduling...
+Input data ready: 0:00:00.389151
+
+-->>Start setting up scheduling optimization...
+Model initiated: 0:00:00.000079
+Variables set up: 0:00:00.030908
+Objective set up: 0:00:00.151343
+Constraint #1 set up: 0:00:00.035655
+Constraint #2 set up: 0:00:00.091578
+Constraint #3 set up: 0:00:00.046228
+Constraint #4 set up: 0:00:00.020864
+Constraint #5 set up: 0:00:00.019117
+Constraint #6 set up: 0:00:00.034556
+Constraint #7 set up: 0:00:00.166180
+
+-->>Start scheduling...
+Gurobi Optimizer version 9.0.1 build v9.0.1rc0 (mac64)
+Optimize a model with 11562 rows, 6049 columns and 178374 nonzeros
+Model fingerprint: 0x89074276
+Variable types: 0 continuous, 6049 integer (6049 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [1e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+00]
+Found heuristic solution: objective 36.1250000
+Presolve removed 11413 rows and 5686 columns
+Presolve time: 0.04s
+Presolved: 149 rows, 363 columns, 2219 nonzeros
+Found heuristic solution: objective 44.1250000
+Variable types: 0 continuous, 363 integer (363 binary)
+
+Root relaxation: objective 4.912500e+01, 129 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   49.12500    0    1   44.12500   49.12500  11.3%     -    0s
+H    0     0                      48.1250000   49.12500  2.08%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Mod-K: 1
+
+Explored 1 nodes (129 simplex iterations) in 0.05 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 48.125 44.125 36.125 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.812500000000e+01, best bound 4.812500000000e+01, gap 0.0000%
+Model optimized: 0:00:00.057110
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+Total preference score: 48.125
+Total sections assigned: 27 (84.4% out of 32)
+Total length of sections assigned: 76.0 hrs (85.4% out of 89.0)
+Total time elapsed: 0:00:01.599210
+Successfully optimized. Results in "schedules_small.xlsx"
